@@ -61,11 +61,11 @@
         .name-entry .name {
             white-space: nowrap;
             padding-right: 0.5rem;
+            /* Add these properties to handle long names on small screens */
             flex-shrink: 1;
             min-width: 0;
             overflow: hidden;
             text-overflow: ellipsis;
-
         }
         .name-entry .dots {
             flex-grow: 1;
@@ -75,6 +75,7 @@
         .name-entry .table-number {
             white-space: nowrap;
             padding-left: 0.5rem;
+            /* Prevent the number from being pushed or shrunk */            
             flex-shrink: 0;            
         }
         .letter-header {
@@ -393,6 +394,7 @@
 
 </body>
 </html>
+
 
 
 
