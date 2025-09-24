@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Russells - Seating Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* --- STEP 1: EMBED YOUR FONTS --- */
+        
+        @font-face {
+            font-family: 'Motterdam';
+            /* Link to the font file you uploaded to GitHub */
+            src: url('Motterdam-K74zp.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TAN Garland';
+            /* Link to the font file you uploaded to GitHub */
+            src: url('TAN-Garland-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* --- STEP 2: APPLY YOUR FONTS --- */
+
+        body {
+            background-color: #1a3a3a;
+            color: #f0ebe2;
+            /* Using your TAN Garland font for the main text */
+            font-family: 'TAN Garland', serif;
+        }
+        .font-title {
+            /* Using your Motterdam font for the big titles */
+            font-family: 'Motterdam', cursive;
+        }
+        .font-sans {
+            /* Using TAN Garland here too for consistency */
+            font-family: 'TAN Garland', sans-serif;
+        }
+        .name-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .name-entry .name {
+            white-space: nowrap;
+            padding-right: 0.5rem;
+        }
+        .name-entry .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #f0ebe2;
+            transform: translateY(-4px);
+        }
+        .name-entry .table-number {
+            white-space: nowrap;
+            padding-left: 0.5rem;
+        }
+        .letter-header {
+             /* Using Motterdam for the large letters */
+             font-family: 'Motterdam', cursive;
+             font-size: 6rem;
+             line-height: 1;
+             margin-right: 1.5rem;
+             color: #f0ebe2;
+             min-width: 80px; /* Ensure space for the letter */
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-8 md:p-12 lg:p-16">
+
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="font-title text-7xl md:text-8xl lg:text-9xl tracking-wider">the<br>Russells</h1>
+            <p class="font-sans text-xl md:text-2xl mt-4 tracking-widest">09.10.25</p>
+        </header>
+
+        <!-- Seating Chart Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+
+            <!-- Section A -->
+            <section id="a" class="clearfix">
+                <div class="letter-header float-left">A</div>
+                <div class="text-lg">
+                    <div class="name-entry"><span class="name">Alconcel, Babeth</span><span class="dots"></span><span class="table-number">7</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Carmina</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Dionna</span><span class="dots"></span><span class="table-number">7</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Edwin</span><span class="dots"></span><span class="table-number">7</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Estrella</span><span class="dots"></span><span class="table-number">7</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Hernel</span><span class="dots"></span><span class="table-number">7</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Mark</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Melissa</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Michael</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Alconcel, Nathan</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Alibin, Rose</span><span class="dots"></span><span class="table-number">6</span></div>
+                    <div class="name-entry"><span class="name">Angelosante, Andria</span><span class="dots"></span><span class="table-number">9</span></div>
+                    <div class="name-entry"><span class="name">Asante, Sam</span><span class="dots"></span><span class="table-number">9</span></div>
+                    <div class="name-entry"><span class="name">Asante, Tatiana</span><span class="dots"></span><span class="table-number">9</span></div>
+                </div>
+            </section>
+
+            <!-- Section B -->
+            <section id="b" class="clearfix">
+                <div class="letter-header float-left">B</div>
+                <div class="text-lg">
+                     <div class="name-entry"><span class="name">Belgrave, Duane</span><span class="dots"></span><span class="table-number">12</span></div>
+                     <div class="name-entry"><span class="name">Bernard, Mariette</span><span class="dots"></span><span class="table-number">12</span></div>
+                     <div class="name-entry"><span class="name">Bernard, Shedaine</span><span class="dots"></span><span class="table-number">12</span></div>
+                     <div class="name-entry"><span class="name">Blackwood, Misty</span><span class="dots"></span><span class="table-number">13</span></div>
+                     <div class="name-entry"><span class="name">Blackwood, Randy</span><span class="dots"></span><span class="table-number">13</span></div>
+                     <div class="name-entry"><span class="name">Bucknor, Gillian</span><span class="dots"></span><span class="table-number">4</span></div>
+                </div>
+            </section>
+
+            <!-- Section C -->
+            <section id="c" class="clearfix">
+                <div class="letter-header float-left">C</div>
+                <div class="text-lg">
+                    <div class="name-entry"><span class="name">Campbell, Nathan</span><span class="dots"></span><span class="table-number">9</span></div>
+                    <div class="name-entry"><span class="name">Channer, Brittney</span><span class="dots"></span><span class="table-number">9</span></div>
+                    <div class="name-entry"><span class="name">Coronado, Michelle</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Coronado, Rady</span><span class="dots"></span><span class="table-number">11</span></div>
+                    <div class="name-entry"><span class="name">Cover, Emahnee</span><span class="dots"></span><span class="table-number">4</span></div>
+                    <div class="name-entry"><span class="name">Cover, Mischa</span><span class="dots"></span><span class="table-number">2</span></div>
+                    <div class="name-entry"><span class="name">Cover, Nazmi</span><span class="dots"></span><span class="table-number">2</span></div>
+                </div>
+            </section>
+            
+            <!-- Add sections for D through Z here -->
+            <!-- Example for section D:
+            <section id="d" class="flex">
+                <div class="letter-header">D</div>
+                <div class="w-full text-lg">
+                    <div class="name-entry"><span class="name">Davis, John</span><span class="dots"></span><span class="table-number">5</span></div>
+                </div>
+            </section>
+            -->
+
+        </main>
+    </div>
+
+</body>
+</html>
+
+
+
