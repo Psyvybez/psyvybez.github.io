@@ -38,10 +38,24 @@
         .font-date {
             font-family: 'ITC Benguiat', serif;
         }
-        /* New rule for the heading's line spacing */
+      
         .title-heading {
-            line-height: 0.2; /* I've reduced this value to tighten the line spacing */
-        }        
+            line-height: 0.8; 
+        }
+
+        /* Layout for each name/number line */
+        .name-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .name-entry .name {
+            /* This is the key change: allow text to wrap */
+            white-space: normal; 
+            padding-right: 0.5rem;
+        }
+              
         /* Layout for each name/number line */
         .name-entry {
             display: flex;
@@ -71,7 +85,7 @@
         /* The large letter that floats */
         .letter-header {
              font-family: 'Motterdam', cursive;
-             font-size: 6rem;
+             font-size: 4rem;
              line-height: 1;
              color: #f0ebe2;
              float: left; /* This is what makes it wrap */
