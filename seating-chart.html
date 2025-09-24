@@ -84,15 +84,21 @@
              font-size: 6rem;
              line-height: 1;
              color: #f0ebe2;
+             float: left; /* Make the letter float to the left */
+             margin-right: 1.5rem; /* Add space between letter and names */
         }
-        /* NEW LAYOUT STYLES */
-        .guest-section {
-            display: grid;
-            grid-template-columns: auto 1fr; /* Letter column gets auto width, names take rest */
-            gap: 1.5rem; /* Space between letter and names */
+        
+        /* This helper class contains the floated letter so sections don't overlap */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
-       .guest-section .text-lg {
-            color: #f0ebe2; /* This line fixes the invisible text */
+        
+        /* This ensures the names list itself is visible and correctly wraps */
+        .name-list {
+            color: #f0ebe2; /* Ensures text is visible */
+            overflow: hidden; /* This makes the div wrap around the floated letter */
         }
     </style>
 </head>
@@ -110,9 +116,9 @@
         <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
 
             <!-- Section A -->
-            <section id="a" class="guest-section">
+            <section id="a" class="clearfix">
                 <div class="letter-header">A</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Alconcel, Babeth</span><span class="dots"></span><span class="table-number">7</span></div>
                     <div class="name-entry"><span class="name">Alconcel, Carmina</span><span class="dots"></span><span class="table-number">11</span></div>
                     <div class="name-entry"><span class="name">Alconcel, Dionita</span><span class="dots"></span><span class="table-number">7</span></div>
@@ -131,9 +137,9 @@
             </section>
 
             <!-- Section B -->
-            <section id="b" class="guest-section">
+            <section id="b" class="clearfix">
                 <div class="letter-header">B</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Belgrave, Duane</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Bernard, Mariette</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Bernard, Shedaine</span><span class="dots"></span><span class="table-number">12</span></div>
@@ -144,9 +150,9 @@
             </section>
 
             <!-- Section C -->
-            <section id="c" class="guest-section">
+            <section id="c" class="clearfix">
                 <div class="letter-header">C</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Campbell, Nathan</span><span class="dots"></span><span class="table-number">9</span></div>
                     <div class="name-entry"><span class="name">Channer, Brittney</span><span class="dots"></span><span class="table-number">9</span></div>
                     <div class="name-entry"><span class="name">Coronado, Michelle</span><span class="dots"></span><span class="table-number">11</span></div>
@@ -161,9 +167,9 @@
             </section>
             
             <!-- Section D -->
-            <section id="d" class="guest-section">
+            <section id="d" class="clearfix">
                 <div class="letter-header">D</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Dallo, James</span><span class="dots"></span><span class="table-number">1</span></div>
                     <div class="name-entry"><span class="name">Dawkins, Robert</span><span class="dots"></span><span class="table-number">2</span></div>
                     <div class="name-entry"><span class="name">Destine, Danielle</span><span class="dots"></span><span class="table-number">8</span></div>
@@ -174,27 +180,27 @@
             </section>
             
             <!-- Section E -->
-            <section id="e" class="guest-section">
+            <section id="e" class="clearfix">
                 <div class="letter-header">E</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Edosa, Mackenzie</span><span class="dots"></span><span class="table-number">4</span></div>
-                    <div class="name-entry"><span class="name">Edwards, Shacquille (Lanez)</span><span class="dots"></span><span class="table-number">12</span></div>
+                    <div class="name-entry"><span class="name">Edwards, Shacquille</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Eugenio, Rey</span><span class="dots"></span><span class="table-number">13</span></div>
                 </div>
             </section>
             
             <!-- Section F -->
-            <section id="f" class="guest-section">
+            <section id="f" class="clearfix">
                 <div class="letter-header">F</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Fabroa, Hyacinth</span><span class="dots"></span><span class="table-number">1</span></div>
                 </div>
             </section>
 
             <!-- Section G -->
-            <section id="g" class="guest-section">
+            <section id="g" class="clearfix">
                 <div class="letter-header">G</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Galvan, Cesar</span><span class="dots"></span><span class="table-number">7</span></div>
                     <div class="name-entry"><span class="name">Galvan, Kenneth</span><span class="dots"></span><span class="table-number">11</span></div>
                     <div class="name-entry"><span class="name">Galvan, Kristel</span><span class="dots"></span><span class="table-number">11</span></div>
@@ -212,9 +218,9 @@
             </section>
 
             <!-- Section H -->
-            <section id="h" class="guest-section">
+            <section id="h" class="clearfix">
                 <div class="letter-header">H</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Hamilton, Norman</span><span class="dots"></span><span class="table-number">13</span></div>
                     <div class="name-entry"><span class="name">Harding, Josh</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Harding Borden, Pearl</span><span class="dots"></span><span class="table-number">5</span></div>
@@ -227,18 +233,18 @@
             </section>
 
             <!-- Section I -->
-            <section id="i" class="guest-section">
+            <section id="i" class="clearfix">
                 <div class="letter-header">I</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Iamundo, Francesca</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Isaac, Alyssa</span><span class="dots"></span><span class="table-number">13</span></div>
                 </div>
             </section>
 
             <!-- Section J -->
-            <section id="j" class="guest-section">
+            <section id="j" class="clearfix">
                 <div class="letter-header">J</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Jaramillo, Caithlyn</span><span class="dots"></span><span class="table-number">10</span></div>
                     <div class="name-entry"><span class="name">Jaramillo, Cresente</span><span class="dots"></span><span class="table-number">10</span></div>
                     <div class="name-entry"><span class="name">Jaramillo, Jonathan</span><span class="dots"></span><span class="table-number">10</span></div>
@@ -252,9 +258,9 @@
             </section>
 
             <!-- Section K -->
-            <section id="k" class="guest-section">
+            <section id="k" class="clearfix">
                 <div class="letter-header">K</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Keenliside, Leah</span><span class="dots"></span><span class="table-number">1</span></div>
                     <div class="name-entry"><span class="name">King, Anne-Marie</span><span class="dots"></span><span class="table-number">8</span></div>
                     <div class="name-entry"><span class="name">Kondell, Audreyanna</span><span class="dots"></span><span class="table-number">4</span></div>
@@ -262,9 +268,9 @@
             </section>
 
             <!-- Section L -->
-            <section id="l" class="guest-section">
+            <section id="l" class="clearfix">
                 <div class="letter-header">L</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Langdon, Earvin</span><span class="dots"></span><span class="table-number">11</span></div>
                     <div class="name-entry"><span class="name">Lassche, Kayla</span><span class="dots"></span><span class="table-number">3</span></div>
                     <div class="name-entry"><span class="name">Lassche, Natalie</span><span class="dots"></span><span class="table-number">3</span></div>
@@ -275,9 +281,9 @@
             </section>
 
             <!-- Section M -->
-            <section id="m" class="guest-section">
+            <section id="m" class="clearfix">
                 <div class="letter-header">M</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Malcolm, Lainey</span><span class="dots"></span><span class="table-number">5</span></div>
                     <div class="name-entry"><span class="name">Malcolm, Nicolette</span><span class="dots"></span><span class="table-number">3</span></div>
                     <div class="name-entry"><span class="name">Malcolm, Sandra</span><span class="dots"></span><span class="table-number">5</span></div>
@@ -293,9 +299,9 @@
             </section>
 
             <!-- Section P -->
-            <section id="p" class="guest-section">
+            <section id="p" class="clearfix">
                 <div class="letter-header">P</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Payne, Alison</span><span class="dots"></span><span class="table-number">13</span></div>
                     <div class="name-entry"><span class="name">Pereira, Christopher</span><span class="dots"></span><span class="table-number">8</span></div>
                     <div class="name-entry"><span class="name">Pereira, Priscilla</span><span class="dots"></span><span class="table-number">8</span></div>
@@ -308,9 +314,9 @@
             </section>
 
             <!-- Section R -->
-            <section id="r" class="guest-section">
+            <section id="r" class="clearfix">
                 <div class="letter-header">R</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Reid, Jahmeika</span><span class="dots"></span><span class="table-number">4</span></div>
                     <div class="name-entry"><span class="name">Reynolds, Jalen</span><span class="dots"></span><span class="table-number">4</span></div>
                     <div class="name-entry"><span class="name">Riloquio, Robert</span><span class="dots"></span><span class="table-number">10</span></div>
@@ -321,9 +327,9 @@
             </section>
 
             <!-- Section S -->
-            <section id="s" class="guest-section">
+            <section id="s" class="clearfix">
                 <div class="letter-header">S</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Sanajko, Katharine</span><span class="dots"></span><span class="table-number">9</span></div>
                     <div class="name-entry"><span class="name">Sanajko, Nestor</span><span class="dots"></span><span class="table-number">9</span></div>
                     <div class="name-entry"><span class="name">Sanchez, Cyruss</span><span class="dots"></span><span class="table-number">1</span></div>
@@ -338,9 +344,9 @@
             </section>
 
             <!-- Section T -->
-            <section id="t" class="guest-section">
+            <section id="t" class="clearfix">
                 <div class="letter-header">T</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Taylor, Michael</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Taylor, Wendy</span><span class="dots"></span><span class="table-number">5</span></div>
                     <div class="name-entry"><span class="name">Thomas, Michael</span><span class="dots"></span><span class="table-number">2</span></div>
@@ -365,9 +371,9 @@
             </section>
 
             <!-- Section V -->
-            <section id="v" class="guest-section">
+            <section id="v" class="clearfix">
                 <div class="letter-header">V</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Vernon, Aimee</span><span class="dots"></span><span class="table-number">3</span></div>
                     <div class="name-entry"><span class="name">Vernon, Johnny</span><span class="dots"></span><span class="table-number">3</span></div>
                     <div class="name-entry"><span class="name">Vernon, Joshua</span><span class="dots"></span><span class="table-number">3</span></div>
@@ -376,9 +382,9 @@
             </section>
 
             <!-- Section W -->
-            <section id="w" class="guest-section">
+            <section id="w" class="clearfix">
                 <div class="letter-header">W</div>
-                <div class="text-lg">
+                <div class="text-lg name-list">
                     <div class="name-entry"><span class="name">Waithe, Scott</span><span class="dots"></span><span class="table-number">1</span></div>
                     <div class="name-entry"><span class="name">Walters-West, Tieann</span><span class="dots"></span><span class="table-number">13</span></div>
                     <div class="name-entry"><span class="name">White, Andrea</span><span class="dots"></span><span class="table-number">5</span></div>
