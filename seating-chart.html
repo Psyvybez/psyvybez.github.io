@@ -24,6 +24,14 @@
             font-style: normal;
         }
 
+        @font-face {
+            font-family: 'ITC Benguiat';
+            /* UPLOAD AND ADD YOUR FONT FILENAME HERE */
+            src: url('ITCBenguiat.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* --- STEP 2: APPLY YOUR FONTS --- */
 
         body {
@@ -35,6 +43,10 @@
         .font-title {
             /* Using your Motterdam font for the big titles */
             font-family: 'Motterdam', cursive;
+        }
+        .font-date {
+            /* Using ITC Benguiat for the date */
+            font-family: 'ITC Benguiat', serif;
         }
         .font-sans {
             /* Using TAN Garland here too for consistency */
@@ -81,9 +93,8 @@
 
         <!-- Header -->
         <header class="text-center mb-16">
-            <h1 class="font-title text-7xl md:text-8xl lg:text-9xl tracking-wider">the</h1>
-            <h1 class="font-TAN Garland-text-7xl md:text-8xl lg:text-9xl tracking-wider">Russel</h1>
-            <p class="font-sans text-xl md:text-2xl mt-4 tracking-widest">09.10.25</p>
+            <h1 class="text-7xl md:text-8xl lg:text-9xl tracking-wider"><span class="font-title">the</span><br>Russells</h1>
+            <p class="font-date text-xl md:text-2xl mt-4 tracking-widest">09.10.25</p>
         </header>
 
         <!-- Seating Chart Grid -->
@@ -145,7 +156,7 @@
                 <div class="letter-header float-left">D</div>
                 <div class="text-lg">
                     <div class="name-entry"><span class="name">Dallo, James</span><span class="dots"></span><span class="table-number">1</span></div>
-                    <div class="name-entry"><span class="name">Dawkins, Robert</span><span class="dots"></span><span class="table-number">2</span></div>
+                    <div class="name-entry"><span class="name">Dawkins, Robert (Freshie)</span><span class="dots"></span><span class="table-number">2</span></div>
                     <div class="name-entry"><span class="name">Destine, Danielle</span><span class="dots"></span><span class="table-number">8</span></div>
                     <div class="name-entry"><span class="name">Destine, Jean-Marc</span><span class="dots"></span><span class="table-number">8</span></div>
                     <div class="name-entry"><span class="name">Dionisio, Abigail</span><span class="dots"></span><span class="table-number">2</span></div>
@@ -159,7 +170,7 @@
                 <div class="letter-header float-left">E</div>
                 <div class="text-lg">
                     <div class="name-entry"><span class="name">Edosa, Mackenzie</span><span class="dots"></span><span class="table-number">4</span></div>
-                    <div class="name-entry"><span class="name">Edwards, Shacquille</span><span class="dots"></span><span class="table-number">12</span></div>
+                    <div class="name-entry"><span class="name">Edwards, Shacquille (Lanez)</span><span class="dots"></span><span class="table-number">12</span></div>
                     <div class="name-entry"><span class="name">Eugenio, Rey</span><span class="dots"></span><span class="table-number">13</span></div>
                 </div>
             </section>
@@ -378,4 +389,6 @@
 
 </body>
 </html>
+
+
 
